@@ -11,13 +11,15 @@
   width: 15%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  border-color:bisque;
+  border-style: dashed;
   justify-content: space-evenly;
-
 }
 
 .right-side {
   width: 85%;
   height: 100%;
   margin: 2%;
-  background-color: darkcyan;
+  background-color: rgba(241, 222, 199, 0.945);
 }
