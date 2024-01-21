@@ -1,6 +1,6 @@
 const Page = () =>  {
     return (
-    <p>Import Note Form</p>
+    <p>Import.....</p>
     );
   }
 
