@@ -8,14 +8,14 @@
     height: 100vh;
   }
 
-  
+
   .sidebar {
-    flex: 0 0 20%;
+    
     background-color: #eee;
     border-width: 0px 1px 0px 0px;
     border-color: black;
     display: flex;
-    align-items: top;
+    align-items: top; 
     justify-content: space-between;
     padding: 80px;
   }
@@ -24,7 +24,8 @@
     align-items: center;
     justify-content: center;
     margin: 50px 0px;
-    transition: font-size 0.1s ease;
+    transition: font-size 0.1s;
+    width: 80px;
   }
   .sidebar ul li:hover {
     font-size: 1.2em;
@@ -41,4 +42,8 @@
   }
   .title-input::placeholder {
     color: transparent;
+  }
+
+  nav:hover .nav-links {
+    visibility: visible;
   }

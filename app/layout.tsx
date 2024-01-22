@@ -64,31 +64,33 @@ return (
   );
 }
 
-
-
 const NavBar: React.FC<NavBarProps> = ({routes, className = ''}) => {
 
   const [isNavVisible, setNavVisible] = useState(true);
   return (
-    <nav className={`top-0 bottom-0 left-0 max-w-full flex flex-row bg-red bg-blue-200 ${className}`}>
-      <button 
-        className='py-2 pl-4 pr-12 flex flex-row text-left hover:bg-red-200 '
-        onClick={() => setNavVisible(!isNavVisible)}
-      >
-        X
-      </button>
-      {isNavVisible && routes.map((r) => (
+  <nav 
+    className={`top-0 bottom-0 left-0 max-w-full flex flex-row bg-red bg-blue-200 ${className}`}
+    onMouseEnter={() => setNavVisible(true)}
+    onMouseLeave={() => setNavVisible(false)}
+  >
+    <button 
+      className='py-2 pl-4 pr-12 flex flex-row text-left hover:bg-red-200 ml-24 font-bold'
+      onMouseEnter={() => setNavVisible(true)}
+    >
+      X
+    </button>
+    <div className={`nav-links flex ${isNavVisible ? 'visible' : 'hidden'}`}>
+      {routes.map((r) => (
         <a href={r.path}>
           <button className='w-full text-left py-2 pl-4 pr-12 hover:bg-green-200'>{r.name}</button>
         </a>       
       ))}
-       
-    <a href="/">
-    <button className='w-full text-left py-2 pl-4 pr-12 hover:bg-green-200'>Home</button></a>
-  
-    </nav>
-    
-  );
+      <a href="/">
+        <button className='w-full text-left py-2 pl-4 pr-12 hover:bg-green-200'>Home</button>
+      </a>
+    </div>
+  </nav>
+);
 
 
 }
