@@ -13,18 +13,28 @@ const Page = () => {
      
     }
   }
+  const list = ["Today", "Work", "Projects", "Favorites", "Archive", "Trash"]
+  const listCategories = list.map((item) => (
+      <li key={item}>{item}</li>
+    )
+  
+    )
+  
 
   return (
     <div className="container max-w-full">
         <div className="sidebar">
         <ul>
+          {listCategories}
+        </ul>
+       {/* / <ul>
                 <li>Today</li>
                 <li>Work</li>
                 <li>Projects</li>
                 <li>Favorites</li>
                 <li>Archive</li>
                 <li>Trash</li>
-            </ul>
+            </ul> */}
         </div>
         <div className="content ">
           <input

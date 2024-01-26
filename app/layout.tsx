@@ -82,7 +82,7 @@ const NavBar: React.FC<NavBarProps> = ({routes, className = ''}) => {
     <div className={`nav-links flex ${isNavVisible ? 'visible' : 'hidden'}`}>
       {routes.map((r) => (
         <a href={r.path}>
-          <button className='w-full text-left py-2 pl-4 pr-12 hover:bg-green-200'>{r.name}</button>
+          <button className=' w-full text-left py-2 pl-4 pr-12 hover:bg-green-200'>{r.name}</button>
         </a>       
       ))}
       <a href="/">
